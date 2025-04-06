@@ -29,12 +29,17 @@ int setupWindow(Size size, char* name);
 void setupViewport(Size size);
 
 
+void setupGLFW(){
+    glfwInit();
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+}
+
 GLFWwindow *window;
 void setEzWindow(GLFWwindow *x){
     window = x;
 }
-
-
 
 int setupWindow(Size size, char* name){
     GLFWwindow *window = glfwCreateWindow(size.x, size.y, name, NULL, NULL);
