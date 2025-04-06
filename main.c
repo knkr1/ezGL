@@ -13,16 +13,17 @@ int main(int argc, char **argv)
 {
 
     setupGLFW();
+    setupGLAD();
     
     Size windowSize = generateSize(800,600);
 
     setupWindow(windowSize,"hi");
     setupGLAD();
     setupViewport(windowSize);
+    windowColorRGBA(30,144,255,0);
 
     while (!glfwWindowShouldClose(window))
     {
-        windowColorRGBA(30,144,255,0);
         glfwPollEvents();
     }
 

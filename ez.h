@@ -15,6 +15,12 @@ typedef struct Size
     uint16_t x,y;
 } Size;
 
+/**
+ * Returns a Size type that expected to include pixels for scaling purposes
+ * @param x The x dimension of the size (uint16_t)
+ * @param y The y dimension of the size (uint16_t)
+ * @warning uint16_t supports the numbers between 0 and 65535
+ */
 Size generateSize(uint16_t x,uint16_t y){
     return (Size){x,y};
 }
